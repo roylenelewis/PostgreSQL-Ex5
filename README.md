@@ -50,29 +50,29 @@ This e-commerce database is designed to manage sales, inventory, and customer be
 
 ## Triggers
 
-1. Stock Quantity Update Trigger (update_stock_trigger):
+1. **Stock Quantity Update Trigger (update_stock_trigger):**
 
-Purpose: Automatically updates the stock quantity of a product whenever an order item is inserted.
+**Purpose:** Automatically updates the stock quantity of a product whenever an order item is inserted.
 
-Use Case: When a customer places an order, this trigger ensures that the stock quantity of the ordered product decreases by the quantity ordered.
+**Use Case:** When a customer places an order, this trigger ensures that the stock quantity of the ordered product decreases by the quantity ordered.
 
-Example: If a customer orders 2 units of a product, the stock quantity of that product will decrease by 2.
+**Example:** If a customer orders 2 units of a product, the stock quantity of that product will decrease by 2.
 
-2. Stock Availability Check Trigger (check_stock_trigger):
+2. **Stock Availability Check Trigger (check_stock_trigger):**
 
-Purpose: Prevents orders from being placed if there is insufficient stock.
+**Purpose: **Prevents orders from being placed if there is insufficient stock.
 
-Use Case: Before allowing an order item to be inserted, this trigger checks if there is enough stock available. If not, it raises an exception to prevent the order from being placed.
+**Use Case: **Before allowing an order item to be inserted, this trigger checks if there is enough stock available. If not, it raises an exception to prevent the order from being placed.
 
-Example: If a customer tries to order 5 units of a product but only 3 units are in stock, this trigger will prevent the order from being placed.
+**Example:** If a customer tries to order 5 units of a product but only 3 units are in stock, this trigger will prevent the order from being placed.
 
-3. Order Change Logging Triggers (log_order_update_trigger and log_order_delete_trigger):
+3. **Order Change Logging Triggers (log_order_update_trigger and log_order_delete_trigger):**
 
-Purpose: Logs changes to orders, including updates and deletions.
+**Purpose: **Logs changes to orders, including updates and deletions.
 
-Use Case: Whenever an order is updated or deleted, these triggers insert a log entry into the order_log table to track the change.
+**Use Case**: Whenever an order is updated or deleted, these triggers insert a log entry into the order_log table to track the change.
 
-Example: If an order's customer ID is updated, a log entry will be created indicating the change type as 'UPDATE'.
+**Example:** If an order's customer ID is updated, a log entry will be created indicating the change type as 'UPDATE'.
 
 ## Use Cases
 
