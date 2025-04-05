@@ -60,9 +60,9 @@ This e-commerce database is designed to manage sales, inventory, and customer be
 
 2. **Stock Availability Check Trigger (check_stock_trigger):**
 
-**Purpose: **Prevents orders from being placed if there is insufficient stock.
+**Purpose**:Prevents orders from being placed if there is insufficient stock.
 
-**Use Case: **Before allowing an order item to be inserted, this trigger checks if there is enough stock available. If not, it raises an exception to prevent the order from being placed.
+**Use Case**: Before allowing an order item to be inserted, this trigger checks if there is enough stock available. If not, it raises an exception to prevent the order from being placed.
 
 **Example:** If a customer tries to order 5 units of a product but only 3 units are in stock, this trigger will prevent the order from being placed.
 
